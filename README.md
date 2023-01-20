@@ -1,3 +1,2 @@
 # InstagramScraper
-Scrape posts of an Instagram user
 This program uses the OkHttp library to make HTTP requests to the Instagram API. It first gets the user's ID by making a request to the `/users/search` endpoint, then gets the user's recent posts by making a request to the `/users/{user-id}/media/recent` endpoint. It then iterates through the list of posts and downloads each one, checking if it is a slideshow or video and downloading it accordingly. It also handles pagination by making additional requests to the `/users/{user-id}/media/recent` endpoint with the `next_url` parameter as specified in the `pagination` field of the response.
