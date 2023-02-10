@@ -16,10 +16,10 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 public class InstagramScraper {
-    private static final String ACCESS_TOKEN = "ACCESS_TOKEN";
+    private static final String ACCESS_TOKEN = "58ba37e30ab256b93d5e4753b2d918db";
     private static final String USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.61 Safari/537.36";
-    private static final String BASE_URL = "https://api.instagram.com/v1";
-    private static final String USER_ENDPOINT = BASE_URL + "/users/%s/media/recent";
+    private static final String BASE_URL = "https://api.instagram.com";
+    private static final String USER_ENDPOINT = BASE_URL + "/%s";
     private static final String TAG_ENDPOINT = BASE_URL + "/tags/%s/media/recent";
 
     public static void main(String[] args) throws IOException {
@@ -27,7 +27,7 @@ public class InstagramScraper {
         OkHttpClient client = new OkHttpClient();
 
         // Get user's ID
-        String username = "USERNAME";
+        String username = "handesila";
         String userId = getUserId(client, username);
 
         // Get user's recent posts
